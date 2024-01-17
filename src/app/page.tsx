@@ -35,12 +35,11 @@ export default function Home() {
           // alt="Next.js Logo"
           width={180}
           height={37}
-          priority
-        />
+          priority alt={''}        />
       </div>
 
       <div>
-      <textarea className="resize-none w-full h-24 border rounded-md p-2 text-black"></textarea>
+      <textarea className="resize-none w-full h-24 border rounded-md p-2 text-black" placeholder='Konnichiwa!'></textarea>
       <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">Send</button>
     </div>
 
