@@ -17,10 +17,23 @@ const Navbar = () => {
                 </div>
 
                 <div>
-                    <NavbarLink />
-                    <NavbarLink />
-                    <NavbarLink />
-                    <NavbarLink />
+                    <NavbarLink
+                        href="/user/profile"
+                        label="Profile"
+                    />
+                    <NavbarLink
+                        href="/auth/regist"
+                        label="Register"
+                    />
+                    <NavbarLink
+                        href="/auth/login"
+                        label="Sign in"
+                    />
+                    <NavbarLink
+                        href="#"
+                        label="Sign out"
+                        onClick={() => { alert('Sign out!!!!') }}
+                    />
                 </div>
             </div>
         </nav>

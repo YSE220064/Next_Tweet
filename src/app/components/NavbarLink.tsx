@@ -1,12 +1,19 @@
 import Link from "next/link";
 
-const NavbarLink = () => {
+interface NavbarLinkProps {
+    href: string;
+    label: string;
+    onClick?: () => void;
+}
+
+const NavbarLink = ({href, label, onClick} : NavbarLinkProps) => {
     return (
         <Link
-            href="/user/profile"
+            href={href}
             className="hidden md:inline-block p-3 text-white"
+            onClick={onClick}
             >
-            Profile
+            {label}
         </Link>
     );
 }
