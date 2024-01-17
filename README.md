@@ -1,3 +1,9 @@
+<p align="center"><a href="https://github.com/YSE220064/Next_Tweet_Client.git" target="_blank"><img src="https://i.imgur.com/FA2GTaG.jpg" width="150" alt="Logo"></a><br>
+YSE
+IG21
+220064
+</p>
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
