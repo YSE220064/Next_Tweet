@@ -1,15 +1,27 @@
 "use client"
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { User, testUser } from "./models/User";
 import { Tweet } from "./models/Tweet";
-import Image from 'next/image'
+import { getTweets } from "./services/TweetService";
 
 export default function Home() {
   //テストユーザの取得
   const [user] = useState<User>(testUser);
   const [tweets, setTweets] = useState<Tweet[]>([]);
 
+  useEffect(() => {
+    (async () => {
+      if (user?.accessToken) {
+        //APIからTweetデータ取得
+        const data = await getTweets(user.accessToken);
+        console.log(data)
+        //データ設定
+        setTweets(data);
+      }
+    })();
+  }, [user])
+  
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       {/* <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
