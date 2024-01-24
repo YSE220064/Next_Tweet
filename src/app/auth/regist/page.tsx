@@ -1,7 +1,7 @@
 "use client"
 
 import { FaUser } from "react-icons/fa";
-import Input from "@/app/components/Input";
+import Input from "@/src/app/components/Input";
 import Link from "next/link";
 import { useState } from "react";
 
