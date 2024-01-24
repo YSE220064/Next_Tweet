@@ -1,13 +1,10 @@
+import Navbar from '@/app/components/Navbar'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
-import Navbar from './components/Navbar'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Next Tweet Client',
-  description: '2024/01/10',
+  title: 'Next Tweet',
+  description: 'This is tweet app.',
 }
 
 export default function RootLayout({
@@ -17,9 +14,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body className={inter.className}>
-        <center><Navbar /></center>
-        {children}
+      <body>
+        <Navbar />
+        <main className='flex min-h-screen flex-col p-5'>
+          {children}
+        </main>
       </body>
     </html>
   )

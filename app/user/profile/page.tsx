@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image";
-import imageMe from '/public/images/me.jpg'
+import imageMe from '@/public/images/me.jpg'
 
 const ProfilePage = () => {
     return (

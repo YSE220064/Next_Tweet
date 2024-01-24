@@ -11,11 +11,23 @@ const className = `
             focus:bg-white
             focus:border-blue-500
 `
+interface InputProps {
+    type: string;
+    value?: string;
+    placeholder?: string;
+    onChange?: (value: any) => void;
+}
 
-const Input = () => {
+const Input = ({ type, value, placeholder, onChange }: InputProps) => {
 
     return (
-        <input type="text" className={className} />
+        <input
+            type={type}
+            value={value}
+            className={className} 
+            placeholder={placeholder} 
+            onChange={(e) => { onChange && onChange(e.target.value)} }
+            />
     );
 }
 
