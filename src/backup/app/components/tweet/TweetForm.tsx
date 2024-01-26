@@ -1,18 +1,10 @@
 import { useState } from "react";
-import ClickButton from "../ClickButton";
 
 const TweetForm = () => {
     const [message, setMessage] = useState<string>("")
 
     const messageHandler = (event: React.ChangeEvent<HTMLTextAreaElement>): void => {
         setMessage(event.target.value)
-    }
-
-    const isDisable = () => !message;
-
-    // Tweet投稿のイベントハンドラ
-    const onPost = () => {
-
     }
 
     return (
@@ -22,14 +14,15 @@ const TweetForm = () => {
                 onChange={messageHandler}
                 className="resize-none w-full h-24 border rounded-md p-2"
                 placeholder="今なにしてる？"></textarea>
-
             <div className="p-3">{message.length} characters.</div>
-
-            <ClickButton
-                label="Post"
-                onClick={onPost}
-                disabled={isDisable()}
-            />
+            <button
+                className="w-full bg-blue-500 hover:bg-blue-700
+                text-white font-bold 
+                py-3 px-4 mb-2
+                rounded"
+                onClick={() => { }}>
+                Send
+            </button>
         </div>
     );
 }

@@ -12,7 +12,7 @@ const Navbar = () => {
                 <div className="flex items-center mr-6">
                     <SiLoopback className="me-3" size="2em" />
                     <Link href="/" className="ms-3 me-3">
-                        <span className="self-center text-black text-2xl font-semibold">Next Tweet</span>
+                        <span className="self-center text-white text-2xl font-semibold">Next Tweet</span>
                     </Link>
                 </div>
 
