@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import imageMe from "@/public/images/me.jpg";
+import imageMe from "@/public/images/me.png";
 import { Tweet } from "@/app/models/Tweet";
 
 interface TweetDetailProps {
